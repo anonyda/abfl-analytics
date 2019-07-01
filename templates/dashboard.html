@@ -1,14 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/css/master.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Dashboard</title>
-</head>
-<body>
-Hello {{ name }}!
 
-<div>
-        <a href="{{url_for('logout')}}">Logout</a>
+  </head>
+  <body>
+    <div class="main-grid">
+        <div class="main-bar">
+            <div class="logo">
+              <img id="logo" src="../static/resources/ABCLOGO.png" alt="ABC Logo image">
+            </div>
+
+            <div class="tab">
+                <button class="tablinks" onclick="">Home</button> <!-- havent put anything on onlick event-->
+                <button class="tablinks" onclick="">Demographic</button>
+                <button class="tablinks" onclick="">Performance</button>
+                <button class="tablinks" onclick="">Delinquency</button>
+                <button class="tablinks" onclick="">Clients</button>
+                <button class="tablinks" onclick="">Loans</button>
+                <!-- <button class="tablinks" id="logout-button" type="button" name="Logout">LOGOUT</button> -->
+                <!-- <button class="tablinks">Default Button</button>
+                <a href="#" class="tablinks">Link Button</a>
+                <button class="tablinks">Button</button>
+                <input type="button" class="tablinks" value="Input Button">
+                <button class="tablinks" style="vertical-align:middle"><span>Hover </span></button> -->
+            </div>
+            <button class="tablinks" id="logout-button" >LOGOUT</button>
+        </div>
+    <div class="content">
     </div>
+
+    <div class="sub-bar">
+      <div id="control-panel">
+
+          <form action="/action_page.php">
+            <div class="topnav">
+                <input id ="search-bar" type="text" placeholder="  Search..." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+          </form>
+
+
+        <!-- <div class="date-picker"> -->
+          <form action="/action_page.php">
+            <div class="date-picker">
+  	             <input id="start-date-picker" type="date" name="start-time"> <!--changed id names from dp1 , dp2 to start-date-picker, end-date-picker-->
+                 <input id="end-date-picker" type="date" name="end-time">
+            </div>
+    	      <!-- <input id="submit" type="submit"> -->
+          </form>
+        <!-- </div> -->
+
+
+        <div class="preset-container"> <!-- overview selector-->
+          <select class="preset">
+            <option value="0" selected>Select:</option>
+            <option value="Hourly">Hourly</option>
+            <option value="Daily">Daily</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option>
+            <option value="Quaterly">Quaterly</option>
+            <option value="Half Yearly">Half-Yearly</option>
+            <option value="Yearly">Yearly</option>
+         </select>
+        </div>
+      </div>
+
+      <div class="checkbox-list">
+        <!-- <fieldset> -->
+          <h4>Age Group</h4>   <!-- CHECKLIST 1-->
+          <!-- <legend>Age Group</legend> -->
+          <div>
+            <input type="checkbox" id="age-range-1" name="graph-param-1" value="age-range">
+            <label>18-30</label>
+          </div>
+          <div>
+            <input type="checkbox" id="age-range-2" name="graph-param-2" value="age-range">
+            <label>30-58</label>
+          </div>
+          <div>
+            <input type="checkbox" id="age-range-3" name="graph-param-2" value="age-range">
+            <label>58 >...</label>
+          </div>
+
+          <h4>Location</h4>    <!-- CHECKLIST 2-->
+          <div>
+            <input type="checkbox" id="district">
+            <label>District</label>
+          </div>
+          <div>
+            <input type="checkbox" id="city">
+            <label>City</label>
+          </div>
+          <div>
+            <input type="checkbox" id="region">
+            <label>Region</label>
+          </div>
+
+          <h4>Loan Type</h4>   <!-- CHECKLIST 3-->
+          <div>
+            <input type="checkbox" id="ed" name="ed" value="loan-type">
+            <label>Educational</label>
+          </div>
+          <div>
+            <input type="checkbox" id="home-loan" name="home-loan" value="loan-type">
+            <label>Home Loans</label>
+          </div>
+          <div>
+            <input type="checkbox" id="wed" name="wed" value="loan-type">
+            <label>Wedding</label>
+          </div>
+          <div>
+            <input type="checkbox" id="car" name="car" value="loan-type">
+            <label>Car</label>
+          </div>
+          <div>
+            <input type="checkbox" id="travel" name="travel" value="loan-type">
+            <label>Travelling</label>
+          </div>
+          <div>
+            <input type="checkbox" id="med" name="med" value="loan-type">
+            <label>Medical</label>
+          </div>
+
+          <h4>Loan Amount</h4>   <!-- CHECKLIST 4-->
+          <!-- <legend>Age Group</legend> -->
+          <div>
+            <input type="checkbox" id="loan-range-1" name="graph-param-1" value="loan-range">
+            <label>1-25</label>
+          </div>
+          <div>
+            <input type="checkbox" id="loan-range-2" name="graph-param-2" value="loan-range">
+            <label>25-50</label>
+          </div>
+          <div>
+            <input type="checkbox" id="loan-range-3" name="graph-param-3" value="loan-range">
+            <label>50 >...</label>
+          </div>
+        <!-- </fieldset> -->
+
+      </div>
+    </div>
+  </div>
 </body>
 </html>

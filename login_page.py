@@ -12,6 +12,7 @@ app.config['SECRET_KEY'] = 'Thisissupposedtobesecret!'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///abfl.db'
 bootstrap = Bootstrap(app)
 db = SQLAlchemy(app)
+
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
@@ -27,8 +28,8 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 class LoginForm(FlaskForm):
-    username = StringField('Username', validators=[InputRequired(), Length(min=4, max=15)])
-    password = PasswordField('Password', validators=[InputRequired(), Length(min=8, max=80)])
+    username = StringField( '', validators=[InputRequired(), Length(min=4, max=15)])
+    password = PasswordField('', validators=[InputRequired(), Length(min=8, max=80)])
     remember = BooleanField('Remember Me')
 
 class RegisterForm(FlaskForm):
@@ -41,7 +42,6 @@ class RegisterForm(FlaskForm):
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
-
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
         if user:
