@@ -1,0 +1,118 @@
+
+body{
+background-image: url('../images/background.jpg');
+
+}
+
+.center-image{
+	width: 500px;
+	height: 500px;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	border-radius: 5%;
+	filter: brightness(1.5);
+}
+.center-image{
+	opacity: 0.7;
+}
+.abc-logo{
+	width: 250px;
+	height: 100px;
+	position: absolute;
+	transform: translate(250%,110%);
+	box-sizing: border-box;
+	border-radius: 10%;
+	filter: brightness(1.2);
+	padding: 1em;
+
+
+}
+.username {
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	transform: translate(322%, 252%);
+
+}
+.username input{
+	width: 213px;
+	height: 20px;
+	text-indent: 2%;
+	font-size: 15px;
+	
+}
+
+.userimg {
+	background: transparent;
+	border-radius: 0.7;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	transform: translate(1920%, 830%);
+}
+.password {
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	transform: translate(322%, 322%);
+
+}
+.passimg{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	transform: translate(1920%, 1065%);
+}
+.password input{
+	width: 213px;
+	height: 20px;
+	text-indent: 2%;
+	font-size: 15px;
+}
+.submit {
+	position: absolute;
+	transform: translate(1250%, 1365%);
+
+}
+.submit input{
+	width: 70px;
+	height: 30px;
+}
+.username input[type="text"]{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	color: #ffff;
+	
+
+}
+.password input[type="password"]{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	color: #fff;
+	
+
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #eee9e9;
+    font-style: italic;
+}
+.submit input[type="submit"]{
+	border: none;
+	border-radius: 50px;
+	outline: none;
+	font-style: italic;
+
+}
+.submit input[type= "submit"]:hover{
+	cursor: pointer;
+	background: #bebebe	;
+	color:#fff;
+}
