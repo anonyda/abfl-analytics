@@ -1,0 +1,44 @@
+#customers {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#customers td{
+  width: 202px;
+  height:25px;
+}
+
+#customers td, #customers th {
+  border: 0.5px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(199, 34, 42);
+  color: white;
+}
+a{
+  color: white;
+}
+#customers thead {
+  position: -webkit-sticky;
+  table-layout: sticky;
+  position: fixed;
+}
+.fixed th {
+  width: 283.5px;
+
+}
+#customers tbody {
+  overflow: auto;
+  width: 100%;
+
+}
+
